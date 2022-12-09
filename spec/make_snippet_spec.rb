@@ -11,7 +11,6 @@ RSpec.describe "make_snippet method" do
     end
     context "when something other than text is entered" do 
         it "fails" do
-            make_snippet(true)
             expect {(make_snippet(true))}.to raise_error "Text only please!"
         end
     end
