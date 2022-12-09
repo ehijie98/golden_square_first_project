@@ -23,6 +23,12 @@ RSpec.describe "calculate_reading_time method" do
         result = calculate_reading_time(FOUR_THOUSAND_WORDS)
         expect(result).to eq 20
     end
+
+    context "text is not a string" do
+        it "fails" do
+            expect { calculate_reading_time(true) }.to raise_error "Please ensure text is a string!"
+        end
+    end
 end
 
 
