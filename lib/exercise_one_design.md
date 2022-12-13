@@ -1,17 +1,17 @@
 # `reading_time` method design
 
-# 1. Design the problem
+## 1. Design the problem
 > As a user
 > So that I can manage my time
 > I want to see an estimate of reading time for a text, assuming that I can read 200 words a minute.
 
-# 2. Design the method signature
+## 2. Design the method signature
 ```ruby
 reading_time = calculate_reading_time(text)
 # Text is a string with a words
 # Reading time will be an integer representing minutes
 ```
-# 3. Create examples as tests
+## 3. Create examples as tests
 ```ruby
 # 1
 calculate_reading_time("")
@@ -34,4 +34,4 @@ calculate_reading_time(4000_WORDS)
 # => 20
 ```
 
-# Implement the behaviours
+## 4. Implement the behaviours

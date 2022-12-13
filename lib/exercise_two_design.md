@@ -1,12 +1,12 @@
-# check_grammar? method design
+# `check_grammar?` method design
 
-# 1. Design the problem
+## 1. Design the problem
 
 > As a user
 > So that I can improve my grammar
 > I want to verify that a text starts with a capital letter and ends with a suitable sentence-ending punctuation mark.
 
-# 2. Design the method signature
+## 2. Design the method signature
 
 ```ruby
 grammar_check = check_grammar?(text)
@@ -14,7 +14,7 @@ grammar_check = check_grammar?(text)
 # grammar_check will be true or false
 ```
 
-# 3. Create examples as tests
+## 3. Create examples as tests
 ```ruby
 # 1
 check_grammar?("Hello my name is John.")
@@ -38,4 +38,4 @@ check_grammar?("What is your name?")
 
 ```
 
-# 4. Implement the behaviours
+## 4. Implement the behaviours
