@@ -26,14 +26,14 @@ RSpec.describe DiaryEntry do
     describe "#reading_time" do
         context "given a feasible wpm" do
             it "returns ceiling integer representing minutes taken to read contents" do
-                DIARY_CONTENTS = (["contents"] * 200).join(" ")
-                diary_entry = DiaryEntry.new("diary_title", DIARY_CONTENTS)
+                DIARY_CONTENTS_ONE = (["contents"] * 200).join(" ")
+                diary_entry = DiaryEntry.new("diary_title", DIARY_CONTENTS_ONE)
                     expect(diary_entry.reading_time(100)).to eq 2
-                DIARY_CONTENTS = (["contents"] * 300).join(" ")
-                diary_entry = DiaryEntry.new("diary_title", DIARY_CONTENTS)
+                DIARY_CONTENTS_TWO = (["contents"] * 300).join(" ")
+                diary_entry = DiaryEntry.new("diary_title", DIARY_CONTENTS_TWO)
                     expect(diary_entry.reading_time(140)).to eq 3
-                DIARY_CONTENTS = (["contents"] * 50).join(" ")
-                diary_entry = DiaryEntry.new("diary_title", DIARY_CONTENTS)
+                DIARY_CONTENTS_THREE = (["contents"] * 50).join(" ")
+                diary_entry = DiaryEntry.new("diary_title", DIARY_CONTENTS_THREE)
                     expect(diary_entry.reading_time(100)).to eq 1
             end
         end
