@@ -15,7 +15,8 @@ class DiaryEntry
     end
   
     def count_words
-      contents.split(" ").length
+      return 0 if @contents.empty?
+      @contents.count(" ") + 1
     end
   
     def reading_time(wpm) 

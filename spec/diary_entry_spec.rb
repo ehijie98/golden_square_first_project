@@ -18,7 +18,7 @@ RSpec.describe DiaryEntry do
             expect(diary_entry.count_words).to eq 3
         end
         it "returns zero when contents is empty" do
-        diary_entry = DiaryEntry.new("diary_title", " ")
+        diary_entry = DiaryEntry.new("diary_title", "")
             expect(diary_entry.count_words).to eq 0
         end
     end
@@ -43,6 +43,11 @@ RSpec.describe DiaryEntry do
                 diary_entry = DiaryEntry.new("diary_title", "diary_contents")
                     expect{diary_entry.reading_time(0)}.to raise_error "Please ensure wpm given is above 0!"
             end
+        end
+
+        it "returns zero if contents is empty" do
+            diary_entry = DiaryEntry.new("diary_title", "")
+                expect{diary_entry.reading_time(100).to eq 0}
         end
     end
 

@@ -75,4 +75,4 @@ task_manager.completed("roll away the mat")
 # => "This task is not present in your task manager"
 
 ```
-## 4. Implement the behavior
+## 4. Implement the behaviour
